@@ -1,5 +1,4 @@
-/* Please do not use this import in production. You could download this font from here https://fontstorage.com/font/kelson */
-@import "http://fonts.fontstorage.com/import/kelson.css";
+@import "../fonts/kelson.css";
 /*
 	Kelson Sans, 300, 400, 700
 */
