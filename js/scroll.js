@@ -1,15 +1,14 @@
+var s = 1;
+var mov = $('.mov'); 
 $(window).scroll(function() {
-	$('.mov').each(function(){
-		var imagePos = $(this).offset().top;
-		var topOfWindow = $(window).scrollTop();
-		if (imagePos < topOfWindow+300) {
-			$(this).addClass('tada');
-		}
-		if (imagePos < topOfWindow) {
-			$(this).removeClass('tada');
-		}
-		if (imagePos > topOfWindow+450) {
-			$(this).removeClass('tada');
-		}
-	});
+	var top = $(window).scrollTop();
+	var move = projects.offset().top;
+	if (top >= move-300 && s == 1) {
+		s++;
+		$('.mov').addClass('tada');
+	}
+	if (top >= move+200 && s == 2) {
+		s--;
+		$('.mov').removeClass('tada');
+	}
 });
