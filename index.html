@@ -2,34 +2,25 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>My Portfolio</title>
-	<script defer src="./js/jquery.min.js"></script>
-	<script defer src="./js/EasePack.min.js"></script>
-	<script defer src="./js/TimelineMax.min.js"></script>
-	<script defer src="./js/TweenMax.js"></script>
-	<script defer src="./js/bootstrap.min.js"></script>
-	<script defer src="./js/scroll.js"></script>
-	<link rel="stylesheet" href="./css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css" />
-	<link rel="stylesheet" href="./css/font-awesome.min.css" />
-	<link rel="stylesheet" href="./css/animate.css" />
+	<title>Portfolio Trozeman</title>
 	<link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/main.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Dima Shymko (Trozeman) trozeman@gmail.com"/>
 	<meta name="name" content="Portfolio">
 	<meta name="keywords" content="Portfolio, Trozeman">
 	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="My Portfolio">
-	<meta property="og:title" content="My Portfolio">
-	<meta property="og:description" content="My Portfolio.">
+	<meta property="og:site_name" content="Portfolio Trozeman">
+	<meta property="og:title" content="Portfolio Trozeman">
+	<meta property="og:description" content="Portfolio Trozeman.">
 	<meta property="og:url" content="./index.html">
 	<meta property="og:locale" content="ru_RU">
 	<meta property="og:image" content="./images/face.jpg">
 	<meta property="og:image:width" content="500">
 	<meta property="og:image:height" content="500">
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="My Portfolio">
-	<meta name="twitter:description" content="My Portfolio.">
+	<meta name="twitter:title" content="Portfolio Trozeman">
+	<meta name="twitter:description" content="Portfolio Trozeman.">
 	<meta name="twitter:image:src" content="./images/face.jpg">
 	<meta name="twitter:url" content="./index.html">
 	<meta name="twitter:domain" content="https://trozeman.github.io/portfolio/">
@@ -39,205 +30,47 @@
 	<link rel="shortcut icon" href="./ico/favico.ico" />
 </head>
 <body>
+    <header>
+        <nav>
+            <ul class="nav">
+                <li class="item"><a href="#about">About</a></li>
+                <li class="item"><a href="#experience">Experience</a></li>
+                <li class="item"><a href="#works">Works</a></li>
+                <li class="item"><a href="#contacts">Contacts</a></li>
+                <!--<li class="item"><a href="">Link 5</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    <section id="about" class="dark">
+        <h1>Summary</h1>
+        <div class="fx">
+            <div class="wb">
+                <p>
+                    A highly resourceful, innovative, creative and competent developer with extensive experience in the programming, designing, and coding of websites.
+                </p>
+                <p>
+                    During work, many projects completed, for a wide range of corporate, charity and public sector clients
+                </p>
+                <p>
+                    After working on the projects I got experience with a variety of APIs, libraries, frameworks and additional software.
+                </p>
+            </div>
+            <div class="db tc">
+                <img src="./images/face.jpg" alt="">
+                <h1>Dima Shymko</h1>
+                <h2>Full stack WEB developer</h2>
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="white">
+        <h1>Page 2</h1>
+    </section>
+    <section id="works" class="dark">
+        <h1>Page 3</h1>
+    </section>
+    <section id="contacts" class="white">
+        <h1>Page 4</h1>
+    </section>
 
-	<section id="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-					<h1>Hello!</h1>
-				</div>				
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-					<h2>It`s me!</h2>
-					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-md-offset-4 col-sm-offset-3 col-lg-offset-4">
-						<img src="./images/face.jpg" alt="It`s me" class="img-responsive portret">
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<h3>Dima Shymko</h3>
-						<h3>Full stack developer</h3>
-					</div>
-				</div>				
-			</div>
-		</div>
-	</section>
-
-	<section id="icreate">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<h3 class="text-center">I use many frameworks, languages and CMS:</h3>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-boostrap.png" alt="Bootstrap" class="img-responsive photo logo">
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-css3.png" alt="CSS 3" class="img-responsive photo logo">
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-html5.png" alt="HTML 5" class="img-responsive photo logo">
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-java.png" alt="Java" class="img-responsive photo logo">
-					</div>					
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-javascript.png" alt="JS" class="img-responsive photo logo">
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-jquery.png" alt="jQuery" class="img-responsive photo logo">
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-mysql.png" alt="mySql" class="img-responsive photo logo">
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-opencart.png" alt="OpenCart" class="img-responsive photo logo">
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-php.png" alt="PHP" class="img-responsive photo logo">
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-python.png" alt="Python" class="img-responsive photo logo">
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-sass.png" alt="Sass" class="img-responsive photo logo">
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="./images/logo-wordpress.png" alt="WP" class="img-responsive photo logo">
-					</div>
-					<h3 class="text-center">For create some amazing WEB sites and WEB APP</h3>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	<section id="stages">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-					<h3 class="text-center">How i work:</h3>
-					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 thumbnail">
-						<h3>Step 1</h3>
-						<p>First when we start a working, you need complete a brief document, where you write a how you see the your product when him will be finished.</p>
-						<i class="  fa fa-file-text fa-5x animated mov"></i>
-					</div>
-					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 thumbnail">
-						<h3>Step 2</h3>
-						<p>Together we choose the optimal variant of the project. What CMS  use, how choices  a awesome design, check a UI and UX.</p>
-						<i class="fa fa-object-group fa-5x animated mov"></i>
-					</div>
-					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 thumbnail">
-						<h3>Step 3</h3>
-						<p >Create a first mockup site. Then you will see the first result.</p>
-						<i class="fa fa-eye fa-5x animated mov"></i>
-					</div>
-					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 thumbnail">
-						<h3>Step 4</h3>
-						<p>Just to correct bugs, if any.</p>
-						<i class="fa fa-bug fa-5x animated mov"></i>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="result">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<h3 class="text-center">My projects:</h3>
-
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 progect">
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left">
-							<div class="row">
-								<img src="./images/j1.jpg" alt="Search" class="img-responsive">
-							</div>						
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right">
-							<div class="row">
-								<h3>Search stock prices</h3>
-								<p>Access denied</p>
-							</div>	
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 progect">
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left">
-							<div class="row">
-								<h3>Brewery restaurant</h3>
-								<p>http://brovarnya-rivne.com</p>
-							</div>						
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right">
-							<div class="row">
-								<img src="./images/j2.jpg" alt="" class="img-responsive">
-							</div>	
-						</div>
-					</div>
-
-
-
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 progect">
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left">
-							<div class="row">
-								<img src="./images/j3.jpg" alt="" class="img-responsive">
-							</div>						
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right">
-							<div class="row">
-								<h3>Workshop</h3>
-								<p>http://leonaupgreat.ru/lptur888/</p>
-							</div>	
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 progect">
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left">
-							<div class="row">
-								<h3>News portal</h3>
-								<p>http://infohub.org.ua</p>
-							</div>						
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right">
-							<div class="row">
-								<img src="./images/j4.jpg" alt="" class="img-responsive">
-							</div>	
-						</div>
-					</div>
-
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 progect">
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left">
-							<div class="row">
-								<img src="./images/j5.jpg" alt="" class="img-responsive">
-							</div>						
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right">
-							<div class="row">
-								<h3>Personal site</h3>
-								<p>http://avroom.zzz.com.ua</p>
-							</div>	
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="banners">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<h3>HTML5 + JS Animation</h3>
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 banner">
-					<div class="row">
-
-						<h3>If you need animation banner</h3>
-						<h3>Step 2</h3>
-						<h3>Step 3</h3>
-					</div>
-				</div>
-					<button type="button" class="btn btn-default" onclick="play()">Play</button>
-			</div>
-		</div>
-	</section>
-	<script defer src="./js/gsap.js"></script>
 </body>
 </html>
