@@ -1,3 +1,7 @@
+@font-face {
+  font-family: openSans;
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+}
 h1 {
   font-size: 2em;
 }
@@ -27,7 +31,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Calibri Light";
+  font-family: openSans, "Calibri Light", serif;
   color: #fefefe;
 }
 img {
