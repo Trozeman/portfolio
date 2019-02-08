@@ -58,7 +58,7 @@ html{
 body{
   margin: 0;
   padding: 0;
-  font-family: openSans, "Calibri Light", serif;
+  font-family: openSans, 'Calibri Light', serif;
   color: #fefefe;
 }
 img{
@@ -124,4 +124,27 @@ section{
 }
 .tc{
   text-align: center;
+}
+.slide{
+  display: none;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    left: -30px;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    right: -30px;
+  }
+}
+.active{
+  display: block;
 }
