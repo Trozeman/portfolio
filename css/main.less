@@ -4,8 +4,14 @@
 @dk: #131313;
 @backWhite: radial-gradient(circle at 50% 50%,
 rgba(208, 208, 208, 1) 5%,
-rgba(208, 208, 208, 0) 65%
+rgba(208, 208, 208, 0.2) 65%
 ) no-repeat 50% 50%;
+@whiteBack:
+        radial-gradient(circle at 50% 50%,
+        rgba(5, 5, 5, 1) -50%,
+        rgba(15, 15, 15, 0.85) 100%
+        ) no-repeat 50% 50%;
+;
 @ttwt: rgba(254, 254, 254, 0.75);
 @font-face {
   font-family: openSans;
@@ -22,8 +28,12 @@ p{
   padding: @ph @pw;
   min-height: calc(~"100vh -" @ph * 2);
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
   &>*{
-    margin: @pw / 2;
+    margin: @pw / 2 0;
+    width: 100%;
   }
   &>.wb, &>.db{
     margin: 0;
@@ -35,21 +45,31 @@ p{
 
 .fx{
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
 }
 
 .wb{
   background: @wt;
   color: @dk;
-  width: 50%;
   padding: @pw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-basis: 100%;
 }
 
 .db{
   background: @dk;
   color: @wt;
-  width: 50%;
   padding: @pw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-basis: 100%;
 }
 html{
   overflow: hidden;
@@ -113,7 +133,9 @@ section{
 
 .dark{
   background: @dk;
+  background: @whiteBack;
   color: @wt;
+
 }
 .white{
   background: @backWhite;
@@ -121,30 +143,39 @@ section{
 }
 .tr{
   text-align: right;
+  align-items: right;
 }
 .tc{
   text-align: center;
+  align-items: center;
 }
 .slide{
   display: none;
-  position: relative;
-  &::before{
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: red;
-    left: -30px;
-  }
-  &::after{
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: red;
-    right: -30px;
-  }
+}
+#prevSlide{
+  width: 10px;
+  height: 10px;
+  background: red;
+  position: absolute;
+  left: 5px;
+
+}
+#nextSlide{
+  width: 10px;
+  height: 10px;
+  background: red;
+  position: absolute;
+  right:  5px;
+
 }
 .active{
   display: block;
+}
+@media only screen and (max-width: 1000px){
+  html{
+    overflow: auto;
+  }
+  .fx{
+    flex-wrap: wrap;
+  }
 }
