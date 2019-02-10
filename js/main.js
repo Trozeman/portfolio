@@ -1,5 +1,5 @@
 let activeScreen;
-let bot = "https://discordapp.com/api/webhooks/543936728524652554/s1OxBw_Lec5WiNCmqQ8ltnH8rmZMuZoISDBxVITQ2JTyllrgDdPPjGQYxbdns0IRKhq2";
+let bot = "http://trozeman.kl.com.ua/dpm/";
 document.addEventListener("DOMContentLoaded", function () {
     let navBar = document.getElementById("navBar");
     let navBtn = document.getElementById("nav-btn");
