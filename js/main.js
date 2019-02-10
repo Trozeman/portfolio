@@ -1,8 +1,9 @@
 let activeScreen;
-
+let bot = "https://discordapp.com/api/webhooks/543936728524652554/s1OxBw_Lec5WiNCmqQ8ltnH8rmZMuZoISDBxVITQ2JTyllrgDdPPjGQYxbdns0IRKhq2";
 document.addEventListener("DOMContentLoaded", function () {
     let navBar = document.getElementById("navBar");
     let navBtn = document.getElementById("nav-btn");
+    let send = document.getElementById("send");
     activeScreen = document.getElementById("about");
     if(window.location.hash){
         setTimeout(function () {
@@ -28,6 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
             this.classList.remove("nav-btn-react");
         }
     };
+    send.onclick = function () {
+        let message = {
+            username: document.getElementById("userName").value,
+            content: document.getElementById("message").value
+        };
+        console.log(message);
+        $PostTo(bot, message);
+    };
+
 });
 
 document.onmousewheel = function( e ) {
@@ -44,3 +54,46 @@ function scroll(elem, delta) {
         activeScreen = elem.previousElementSibling;
     }
 }
+
+
+$PostTo = function (url, data) {
+    let xmlhttp;
+    try {
+        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+    } catch (e) {
+        try {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (E) {
+            xmlhttp = false;
+        }
+    }
+    if (!xmlhttp && typeof XMLHttpRequest !== 'undefined') {
+        xmlhttp = new XMLHttpRequest();
+    }
+
+    let keys = Object.keys(data);
+    let submit = "";
+    xmlhttp.open("post", url, false);
+    xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    for (let i = 0; i < keys.length; i++) {
+        if (i < 1) {
+            submit += keys[i] + "=" + encodeURIComponent(data.username);
+        } else {
+            submit += "&" + keys[i] + "=" + encodeURIComponent(data.content);
+        }
+    }
+    xmlhttp.send(submit);
+    if (xmlhttp.readyState === 4) {
+        if (xmlhttp.status === 200) {
+            return JSON.parse(xmlhttp.responseText);
+        }
+    }
+
+};
+
+
+
+
+
+
+
